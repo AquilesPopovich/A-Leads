@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Permanent+Marker&family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.scrolled {
+    background-color: rgba(68, 68, 69);
+  }
+  
+  .scrolled .link {
+    color: white; /* Cambia el color del texto a blanco */
+  }
+
+.nav-inicio{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 30px;
+    justify-content: center;
+    flex: 1; /* Asegura que los elementos flexibles ocupen todo el espacio disponible */
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    flex: 1; /* Asegura que los elementos flexibles ocupen todo el espacio disponible */
+}
+
+.nav-item {
+    
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.nav-item a {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.link {
+    color: #000000;
+    font-weight: 600;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(245, 158, 179);
+    transition: width 0.3s;
+}
+
+.link:hover::after {
+    width: 100%;
+}

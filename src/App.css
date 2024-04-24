@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shantell+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Permanent+Marker&family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+.background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    overflow-x: hidden; 
+    height: 100vh;
+    width: 100vw; /* Asegúrate de que este contenedor ocupe el 100% del ancho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #f00 100%);
+    color: white;
+    transition: filter 0.5s ease-out;
+}
+
+.blur {
+    filter: blur(5px); /* Ajusta el valor según tu preferencia */
+  }
+
+
+.span {
+    text-decoration: underline;
+    text-decoration-color: red; /* Establece el color del subrayado */
+    text-decoration-style: solid; /* Establece el estilo del subrayado como una línea sólida */
+    font-weight: normal; /* Restaura el peso de la fuente a su valor predeterminado */
+}
+
+
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.title {
+    font-size: 50px;
+    line-height: 1.5;
+    color: #090909; /* Color predeterminado del texto */
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.red {
+    color: red; /* Color rojo para palabras específicas */
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #322e2e; /* Color del texto secundario */
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Estilos para el contenedor de partículas */
+
+
+
+.buttonAbout {
+    width: 200px; /* Ancho más grande para el botón "¿Quién soy?" */
+    border: 2px solid transparent; /* Borde transparente */
+    position: relative;
+    color: rgb(2, 2, 2);
+    background-color: transparent;
+    padding: 10px 2px;
+    font-family: "Permanent Marker", cursive;
+    transition: transform 0.3s ease;
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px;
+}
+
+.buttonAbout:hover {
+    transform: scale(1.1);
+}
+
+.buttonAbout::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 25px;
+    border: 2px solid #63e; /* Color del borde */
+    animation: pulse-border 2s infinite alternate; /* Animación del borde */
+}
+
+@keyframes pulse-border {
+    0% {
+    }
+    100% {
+        border-color: #f00; /* Color del borde al iluminarse */
+    }
+}
+
+.buttonTest {
+    width: 150px;
+    height: 50px;
+    font-family: "Permanent Marker", cursive;
+    background-color: #ff0000; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color de texto */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    transition: transform 0.3s ease;
+
+}
+
+.buttonTest:hover {
+    background-color: #d41212; /* Color de fondo al pasar el cursor */
+    transform: scale(1.1);
+    text-decoration: underline;
+}

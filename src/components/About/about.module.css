@@ -1,0 +1,95 @@
+/* Agrega estos estilos en tu archivo about.module.css */
+
+.about {
+    margin-top: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .container {
+    text-align: center;
+    background-color: rgba(68, 68, 69, 0.9);
+    color: white;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about::before {
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .about > * {
+    margin-bottom: 20px;
+  }
+  
+  .containerAb {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image{
+    max-width: 400px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    padding: 0px 0 40px 0px;
+  }
+  
+  .imageContainer{
+    max-width: 400px;
+    width: 400px;
+
+  }
+
+  .textContainer {
+    flex: 1;
+  }
+  
+  .textContainer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .textContainer p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .videoContainer {
+    position: relative; /* Añade esta propiedad para posicionar los botones relativos al contenedor de videos */
+    display: flex;
+    align-items: center;
+    color: black;
+    overflow-x: hidden;
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  
+  .video {
+    display: none;
+  }
+  
+  .btnFlecha {
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo semitransparente */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px; /* Espacio entre los botones */
+  }
+  
+  .btnFlecha:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Cambia el color de fondo al pasar el cursor */
+  }
+  
