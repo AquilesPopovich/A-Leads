@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import './App.css';
 import About from './components/About/About';
 import ParticlesBackground from './components/PaticlesBackground/ParticlesBackground';
+import Clientes from './components/clientes/Clientes';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -34,12 +35,13 @@ function App() {
             Gran cantidad de testimonios validan mi trabajo.
           </p>
           <div className="buttons">
-            <button className="buttonTest">¿Quién soy?</button>
+            <button className="buttonTest">Mira informacion sobre quien soy aqui</button>
             <button className="buttonAbout">Ver testimonios</button>
           </div>
         </div>
       </main>
       <About />
+      <Clientes/>
     </div>
   );
 }

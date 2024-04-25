@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #f00 100%);
+    background: radial-gradient(125% 125% at 50% 10%, #000000 40%, rgb(48, 255, 2) 100%);
     color: white;
     transition: filter 0.5s ease-out;
 }
@@ -25,7 +25,7 @@
 
 .span {
     text-decoration: underline;
-    text-decoration-color: red; /* Establece el color del subrayado */
+    text-decoration-color: rgb(48, 255, 2); /* Establece el color del subrayado */
     text-decoration-style: solid; /* Establece el estilo del subrayado como una línea sólida */
     font-weight: normal; /* Restaura el peso de la fuente a su valor predeterminado */
 }
@@ -40,25 +40,24 @@
 .title {
     font-size: 50px;
     line-height: 1.5;
-    color: #090909; /* Color predeterminado del texto */
+    color: #fde3e3; /* Color predeterminado del texto */
     font-family: "Inter", sans-serif;
     font-weight: 800;
     font-style: normal;
 }
 
 .red {
-    color: red; /* Color rojo para palabras específicas */
+    color: rgb(48, 255, 2) /* Color rojo para palabras específicas */
 }
 
 .subtitle {
     font-size: 18px;
-    color: #322e2e; /* Color del texto secundario */
+    color: #c6b7b7; /* Color del texto secundario */
     margin-top: 20px;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-between;
     margin-top: 30px;
 }
 
@@ -70,13 +69,14 @@
     width: 200px; /* Ancho más grande para el botón "¿Quién soy?" */
     border: 2px solid transparent; /* Borde transparente */
     position: relative;
-    color: rgb(2, 2, 2);
+    color: rgb(255, 255, 255);
     background-color: transparent;
     padding: 10px 2px;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Inter", sans-serif;
     transition: transform 0.3s ease;
     font-weight: bold; /* Texto en negrita */
     font-size: 16px;
+    margin: 0px 0px 0 80px;
 }
 
 .buttonAbout:hover {
@@ -99,19 +99,20 @@
     0% {
     }
     100% {
-        border-color: #f00; /* Color del borde al iluminarse */
+        border-color: rgb(48, 255, 2); /* Color del borde al iluminarse */
     }
 }
 
 .buttonTest {
-    width: 150px;
+    width: 400px;
     height: 50px;
-    font-family: "Permanent Marker", cursive;
-    background-color: #ff0000; /* Color de fondo */
-    color: rgb(0, 0, 0); /* Color de texto */
+    font-family: "Inter", sans-serif;
+    background-color: rgb(48, 255, 2); /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color de texto */
     border: none;
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer;
+    margin: 0px 20px;
     font-size: 16px; /* Tamaño de fuente */
     font-weight: bold; /* Texto en negrita */
     text-transform: uppercase; /* Convertir texto a mayúsculas */
@@ -121,7 +122,7 @@
 }
 
 .buttonTest:hover {
-    background-color: #d41212; /* Color de fondo al pasar el cursor */
+    background-color: #18a200; /* Color de fondo al pasar el cursor */
     transform: scale(1.1);
     text-decoration: underline;
 }

@@ -1,0 +1,27 @@
+/* Estilos para el carrusel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* Añade vendor prefixes según sea necesario */
+}
+.cliente {
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+}
+/* Estilos para el vídeo */
+.video-container {
+    display: none;
+}
+/* Estilos para los botones */
+.btn {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
