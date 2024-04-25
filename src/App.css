@@ -12,8 +12,8 @@
     width: 100vw; /* Asegúrate de que este contenedor ocupe el 100% del ancho */
     display: flex;
     align-items: center;
+    background-color: black;
     justify-content: center;
-    background: radial-gradient(125% 125% at 50% 10%, #000000 40%, rgb(48, 255, 2) 100%);
     color: white;
     transition: filter 0.5s ease-out;
 }

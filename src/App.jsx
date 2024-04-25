@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import './App.css';
 import About from './components/About/About';
-import ParticlesBackground from './components/PaticlesBackground/ParticlesBackground';
 import Clientes from './components/clientes/Clientes';
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
     <div>
       <NavBar />
       <main className={`background ${scrollY > 0 ? 'blur' : ''}`} id="mainContainer">
-        <ParticlesBackground />
 
         <div className="container">
           <h1 className="title">
