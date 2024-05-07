@@ -1,27 +1,75 @@
-/* Estilos para el carrusel */
-.carousel {
+.containerClientes {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    /* Añade vendor prefixes según sea necesario */
-}
-.cliente {
-    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  .contenedor {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background: #fff;
+  }
+  
+  .cliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+    overflow: hidden;
     width: 100%;
-    scroll-snap-align: start;
-}
-/* Estilos para el vídeo */
-.video-container {
-    display: none;
-}
-/* Estilos para los botones */
-.btn {
-    margin: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+  }
+
+  .clienteNoActive{
+    background-color: rgba(rgb(255, 250, 250), rgb(250, 255, 250), rgb(254, 254, 255), 0.5);
+    z-index: 10;
+  }
+
+  .clienteActive{
+    background-color: white;
+    z-index: 20;
+  }
+  
+  .cols {
+    flex: 1;
+    z-index: 20;
+  }
+  
+  .col0 {
+    padding-right: 20px;
+  }
+  
+  .col1 {
+    padding-left: 20px;
+  }
+  
+  
+  button {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambio de cursor */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+  }
+
+
+
+
+
+
+
+
+  

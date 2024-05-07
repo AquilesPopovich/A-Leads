@@ -1,63 +1,100 @@
-import React, { useState } from 'react'
-import './clientes.module.css'
+import React, { useState } from 'react';
+import style from './clientes.module.css';
 
 const Clientes = () => {
-    const clientes = [
+    const [clienteIndex, setClienteIndex] = useState(0);
+    
+    const infoClientes = [
         {
-            nombre: "Clau",
-            imagen: "imagen_de_clau.jpg",
-            testimonio: "https://us06web.zoom.us/rec/share/aZevGIyZaJIMe44DZnWXD7RMBapBw8YT5RCgrNMvUdh6ICjryzhJvu8NqilXyjI.TTMcQ_4O4dreInAd"
+            "clientes1": true,
+            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
+            "videoTestimonio": "videoasadsa",
+            "empresa": 'Microsoft',
+            "resultado": "Aumenté las ventas en un 60%",
+            "posicion": "Satya Nadella, CEO de Microsoft"
         },
         {
-            nombre: "Cubel",
-            imagen: "imagen_de_cubel.jpg",
-            testimonio: "https://us06web.zoom.us/rec/share/AIEEX_YxnKlHSpajXamcWZGCjvmaYR_qCW2NVbRxpAZyoZw-9Xf4qZK-SZ0er1DO.eGRWay_3MW_8MuN-"
+            "clientes2": true,
+            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
+            "videoTestimonio": "videoasadsa",
+            "empresa": 'Amazon',
+            "resultado": "Aumenté las ventas en un 80%",
+            "posicion": "Jeff Bezos, CEO de Amazon"
         },
-        // Añade más clientes aquí
+        {
+            "clientes1": true,
+            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
+            "videoTestimonio": "videoasadsa",
+            "empresa": 'Amazon',
+            "resultado": "Aumenté las ventas en un 80%",
+            "posicion": "Jeff Bezos, CEO de Amazon"
+        },
+        {
+            "clientes2": true,
+            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
+            "videoTestimonio": "videoasadsa",
+            "empresa": 'linkedin',
+            "resultado": "Aumenté las ventas en un 80%",
+            "posicion": "Jeff Bezos, CEO de Amazon"
+        }
     ];
 
-    const [currentCliente, setCurrentCliente] = useState(0);
-    const [showVideo, setShowVideo] = useState(false);
-
-    const handleTestimonioClick = (video) => {
-        setShowVideo(true);
-        // Puedes hacer algo con el enlace de video aquí, como abrirlo en una ventana modal
-        console.log("Mostrar vídeo:", video);
-    };
-
     const handleNextCliente = () => {
-        setCurrentCliente((prevCliente) => (prevCliente + 1) % clientes.length);
+        setClienteIndex((prevIndex) => (prevIndex === infoClientes.length - 1 ? 0 : prevIndex + 1));
     };
 
     const handlePrevCliente = () => {
-        setCurrentCliente((prevCliente) => (prevCliente - 1 + clientes.length) % clientes.length);
+        setClienteIndex((prevIndex) => (prevIndex === 0 ? infoClientes.length - 1 : prevIndex - 1));
     };
 
+    const centralIndex = clienteIndex % infoClientes.length;
+    const prevIndex = (centralIndex - 1 + infoClientes.length) % infoClientes.length;
+    const nextIndex = (centralIndex + 1) % infoClientes.length;
+
     return (
-        <div>
-            <div className="carousel">
-                {clientes.map((cliente, index) => (
-                    <div key={index} className={index === currentCliente ? "cliente active" : "cliente"}>
-                        <h2>{cliente.nombre}</h2>
-                        <img src={cliente.imagen} alt={`Imagen de ${cliente.nombre}`} />
-                        <button className="btn testimonio" onClick={() => handleTestimonioClick(cliente.testimonio)}>Ver testimonio</button>
+        <div className={style.containerClientes}>
+            <div className={style.contenedor}>
+                <div className={`${style.cliente} ${style.clienteNoActive}`}>
+                    <div className={`${style.cols} ${style.col0}`}>
+                        <img src={infoClientes[prevIndex].img} alt="" />
                     </div>
-                ))}
-            </div>
-
-            {showVideo && (
-                <div className="video-container">
-                    {/* Aquí podría ir un componente de reproductor de video */}
-                    <p>El vídeo se mostraría aquí</p>
+                    <div className={`${style.cols} ${style.col1}`}>
+                        <h2 className='hola'>Experiencia con {infoClientes[prevIndex].empresa}</h2>
+                        <p className='hola'><b className='hola'>Resultados:</b> {infoClientes[prevIndex].resultado}</p>
+                        <button>Mira el testimonio de {infoClientes[prevIndex].posicion} aquí</button>
+                    </div>
                 </div>
-            )}
+                <div className={`${style.cliente} ${style.clienteActivo}`}>
+                
+                    <div className={`${style.cols} ${style.col0}`}>
+                        <img src={infoClientes[centralIndex].img} alt="" />
+                    </div>
+                    <div className={`${style.cols} ${style.col1}`}>
+                <button onClick={handlePrevCliente}>Anterior</button>
 
-            <div>
-                <button className="btn prev" onClick={handlePrevCliente}>Anterior</button>
-                <button className="btn next" onClick={handleNextCliente}>Siguiente</button>
+                        <h2 className='hola'>Experiencia con {infoClientes[centralIndex].empresa}</h2>
+                        <p className='hola'><b className='hola'>Resultados:</b> {infoClientes[centralIndex].resultado}</p>
+                        <button>Mira el testimonio de {infoClientes[centralIndex].posicion} aquí</button>
+                <button onClick={handleNextCliente}>Siguiente</button>
+
+                    </div>
+                </div>
+                <div className={`${style.cliente} ${style.clienteNoActive}`}>
+                
+                
+                    <div className={`${style.cols} ${style.col0}`}>
+                        <img src={infoClientes[nextIndex].img} alt="" />
+                    </div>
+                    <div className={`${style.cols} ${style.col1}`}>
+                        <h2 className='hola'>Experiencia con {infoClientes[nextIndex].empresa}</h2>
+                        <p className='hola'><b className='hola'>Resultados:</b> {infoClientes[nextIndex].resultado}</p>
+                        <button>Mira el testimonio de {infoClientes[nextIndex].posicion} aquí</button>
+                    </div>
+                </div>
             </div>
+           
         </div>
     );
-}
+};
 
-export default Clientes
+export default Clientes;

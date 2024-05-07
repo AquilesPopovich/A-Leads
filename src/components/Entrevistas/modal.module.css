@@ -1,0 +1,77 @@
+/* Estilos para el fondo del modal */
+.modalContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 1000; /* Asegura que el modal esté por encima del resto del contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnCloseCont{
+  display: flex;
+  justify-content: end;
+  right: 0;
+}
+
+.modal {
+  background-color: white;
+
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.contenedorEntrevistas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnsContainer{
+  display: flex;
+  justify-content: center;
+  color: black;
+
+}
+
+.btnsContainer button{
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+
+}
+
+
+
+.btnsContainer button:hover::after {
+  width: 100%;
+}
+
+/* Estilos para los botones de navegación */
+.btnFlecha {
+  background-color: transparent;
+  border: none;
+  color: black;
+
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btnNavegacion {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}

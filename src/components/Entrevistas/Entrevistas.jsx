@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import style from './about.module.css';
-import imgAbout from '../../assets/imgAbout.jpg';
+import React, { useState } from 'react'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import style from './modal.module.css'
 
-const About = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Entrevistas = ({entrevistas, setEntrevistas}) => {
+
+    const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
@@ -19,32 +19,25 @@ const About = () => {
     setCurrentIndex(index);
   };
 
+    if(!entrevistas) return null
+
   return (
-    <div>
-      <section className={style.about}>
-        <div className={style.container}>
-          <div className={style.containerAb}>
-            <div className={style.imageContainer}>
-              <img className={style.image} src={imgAbout} alt="Imagen Armel" />
-            </div>
-            <div className={style.textContainer}>
-              <h1>Soy Armel de Amorrortu</h1>
-              <p>
-                <span className={style.textSpan}>+3 años de experiencia</span> en el mundo del  <span className={style.textSpan2}>coaching</span> y las <span className={style.textSpan2}>empresas online</span>, mi objetivo principal es ayudarte a <span className={style.textSpan}>escalar</span> tu negocio hasta las <span className={style.textSpan}>5</span>,  <span className={style.textSpan}>6</span> o  <span className={style.textSpan}>7 </span>cifras, <span className={style.textSpan2}>independientemente de tu situación actual</span>. El camino no es fácil, pero estoy aquí para apoyarte en cada paso del camino.
-              </p>
-            </div>
-          </div>
-          <h3>¿Quieres saber más sobre lo que hago? Mira mis diferentes entrevistas</h3>
-          <div className={style.videoContainer}>
+    <div className={style.modalContent}>
+      <div className={style.modal}>
+        <div  className={style.btnCloseCont} >
+
+        <button className={style.btnClose} onClick={()=>setEntrevistas(false)}>Close</button>
+        </div>
+        <div className={style.videoContainer}>
             <div className={style.btnsContainer}>
-            <button className={style.btnFlecha} onClick={goToPrev}><ArrowBackIosNewIcon/></button>
             <button className={style.btnNavegacion} onClick={() => goToIndex(0)}>Entrevista en Madrid</button>
             <button className={style.btnNavegacion} onClick={() => goToIndex(1)}>Entrevista en Narnia</button>
             <button className={style.btnNavegacion} onClick={() => goToIndex(2)}>Entrevista en Joseluis</button>
-            <button className={style.btnFlecha} onClick={goToNext}><ArrowForwardIosIcon/></button>
 
             </div>
-            {/* Contenido de los divs de los videos */}
+            <div className={style.contenedorEntrevistas}>
+
+            <button className={style.btnFlecha} onClick={goToPrev}><ArrowBackIosNewIcon/></button>
             <div style={{ display: currentIndex === 0 ? 'block' : 'none' }}>
               <p>Entrevista en Madrid</p>
               <iframe
@@ -78,11 +71,13 @@ const About = () => {
                 allowFullScreen
               ></iframe>
             </div>
+            <button className={style.btnFlecha} onClick={goToNext}><ArrowForwardIosIcon/></button>
+            </div>
+
           </div>
-        </div>
-      </section>
+      </div>
     </div>
-  );
+  )
 };
 
-export default About;
+export default Entrevistas;

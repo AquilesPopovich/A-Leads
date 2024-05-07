@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import style from './navBar.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { AnimatePresence } from 'framer-motion';
+import Menu from '../menu/Menu';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setMenu(!menu);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-
-      if (scrollTop > 70) { // Cambia este valor según cuánto quieres que se desplace antes de que cambie el color
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
     };
+
+   
 
     window.addEventListener('scroll', handleScroll);
 
@@ -22,18 +28,38 @@ const NavBar = () => {
     };
   }, []);
 
+
+  const scrollToTop = () => {
+    document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
-    <nav className={`${style.navbar} ${scrolled ? style.scrolled : ''}`}>
-      <div className={style['nav-inicio']}>
-        <a href="#home" className={style.link}>Inicio</a>
-      </div>
-      <ul className={style['nav-list']}>
-        <li className={style['nav-item']}><a href="#quien-soy" className={style.link}>Quién Soy</a></li>
-        <li className={style['nav-item']}><a href="#casos-de-estudio" className={style.link}>Casos de Estudio</a></li>
-        <li className={style['nav-item']}><a href="#servicios" className={style.link}>Servicios</a></li>
-        <li className={style['nav-item']}><a href="#contactame" className={style.link}>Contáctame</a></li>
-      </ul>
-    </nav>
+    <div className={`${style.container} ${scrolled ? style.scrolled : ''}`}>
+      <nav className={`${style.nav} ${scrolled ? style.scrolled : ''}`}>
+        <div className={style.logo}>A+Leads<b>.</b></div>
+
+        
+
+        <ul className={`${style.navItems} ${menu ? 'open' : ''}`}>
+          <li><a onClick={scrollToTop}>Inicio</a></li>
+          <li><a href="">Servicios</a></li>
+          <li><a href="">Testimonios</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+        <div className={`${style.links} ${menu ? 'open' : ''}`}>
+          <a className={style.link} href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a>
+          <a className={style.link} href="https://www.instagram.com/armeldeamorrortu/"><FontAwesomeIcon icon={faInstagram} /></a>
+          <a className={style.link} href=""><FontAwesomeIcon icon={faWhatsapp} /></a>
+        </div>
+        <div className={style.mobileMenuButton} onClick={toggleMenu}>
+          <div className={`${style.burger} ${menu ? style.burgerActive : ""}`}></div>
+        </div>
+
+        <AnimatePresence mode='wait'>
+          {menu && <Menu menu={menu} setMenu={setMenu} />}
+        </AnimatePresence>
+      </nav>
+    </div>
   );
 };
 
