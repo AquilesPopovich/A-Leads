@@ -79,12 +79,15 @@ function App() {
 
   return (
     <div className="container">
+      <div  id="Inicio">
+
       <NavBar />
+      </div>
       <div className="scrollButtons">
         <button onClick={() => scrollToSection('up')}>↑</button>
         <button onClick={() => scrollToSection('down')}>↓</button>
       </div>
-      <div id="Inicio" className={`wrapper ${scrollY > 0 ? 'blur' : ''}`}>
+      <div className={`wrapper ${scrollY > 0 ? 'blur' : ''}`}>
         <div className="cols col0">
           <span className="topline">Hola, soy Armel</span>
           <h1 className='h1Index'>
@@ -102,7 +105,7 @@ function App() {
           </p>
           <div className="btns">
             <button onClick={() => setEntrevistas(true)}>Ver entrevistas</button>
-            <button> <a href="#Clientes">Ver testimonios</a> </button>
+            <button> <a className='btnA' href="#Clientes">Ver testimonios</a> </button>
           </div>
         </div>
         <Entrevistas entrevistas={entrevistas} setEntrevistas={setEntrevistas} />

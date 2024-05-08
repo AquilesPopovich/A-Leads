@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './servicios.module.css'
 import armelSeriviocs from '../../assets/armelServicios.jpeg'
 
 
 const Servicios = () => {
+
+  const [infoServi, setInfoServi] = useState(false)
+
+  const servicios = [{
+      name: "aumentar ventas",
+      info: "esto se logra en base a mi experiencia porque soy un crack"
+  }, {
+    name: "aumentar ventas",
+    info: "esto se logra en base a mi experiencia porque soy un crack"
+  }, {
+    name: "aumentar ventas",
+    info: "esto se logra en base a mi experiencia porque soy un crack"
+  }]
+
   return (
     <div className={style.container}>
       <div className={style.content}>
@@ -15,25 +29,16 @@ const Servicios = () => {
       </div>
       <div className={`${style.cols} ${style.col1}`}>        
       <div className={style.contTildes}>
-      <span className={style.tilde}>✓</span>
-        <div className={style.check} >  Aumentar ventas</div>
+        {servicios.map((servicio) =>(
+          <div>
+          <span className={style.tilde}>✓</span>
+          <div onClick={()=>setInfoServi(true)} className={style.check} > {servicio.name}</div>
+          {infoServi ? <p>{servicio.info}</p> : null}
+          </div>
+        ))}
+      
       </div>
-      <div className={style.contTildes}>
-      <span className={style.tilde}>✓</span>
-        <div className={style.check} >  Aumentar ventas</div>
-      </div>
-      <div className={style.contTildes}>
-    <span className={style.tilde}>✓</span>
-        <div className={style.check} >  Aumentar ventas</div>
-      </div>
-      <div className={style.contTildes}>
-    <span className={style.tilde}>✓</span>
-        <div className={style.check} >  Aumentar ventas</div>
-      </div>
-      <div className={style.contTildes}>
-    <span className={style.tilde}>✓</span>
-        <div className={style.check} >  Aumentar ventas</div>
-      </div>
+     
       </div>
       </div>
      

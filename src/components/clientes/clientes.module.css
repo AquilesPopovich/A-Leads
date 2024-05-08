@@ -1,41 +1,69 @@
 .containerClientes {
-    max-width: 800px;
+    width: 100vw;
     margin: 0 auto;
     padding: 20px;
+    flex-direction: row;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: rgba(rgb(21, 21, 21), rgb(21, 21, 21), rgb(12, 12, 12), 0.5);
   }
+
+ 
   
   .contenedor {
     display: flex;
-
-    flex-direction: column;
+    height: 90vh;
+    flex-direction: row;
     align-items: center;
-    width: 80%;
-    background: #fff;
+    width: 100%;
   }
   
   .cliente {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
-    display: flex;
     overflow: hidden;
     width: 100%;
   }
 
   .clienteNoActive{
-    background-color: rgba(rgb(255, 250, 250), rgb(250, 255, 250), rgb(254, 254, 255), 0.5);
-    z-index: 10;
+    height: 80%;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(55, 53, 53, 0.5);
+    transition: 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
   }
 
-  .clienteActive{
-    background-color: white;
-    z-index: 20;
+  .clienteNoActive .hola{
+    color: #fff;
+
   }
+
+
+  .clienteActive{
+    width: 80%;
+    transform: scale(1.6);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 20;
+    transition: 2s;
+  }
+
+  .siguiente{
+    margin: 0px 60px 0 0;
+
+  }
+
   
   .cols {
     flex: 1;
@@ -48,6 +76,11 @@
   
   .col1 {
     padding-left: 20px;
+  }
+
+  .hola{
+    color: black;
+    font-size: 1rem;
   }
   
   

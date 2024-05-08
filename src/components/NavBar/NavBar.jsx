@@ -39,7 +39,7 @@ const NavBar = () => {
         <div className={style.logo}>A+Leads<b>.</b></div>
 
         
-
+        
         <ul className={`${style.navItems} ${menu ? 'open' : ''}`}>
           <li><a onClick={scrollToTop}>Inicio</a></li>
           <li><a href="">Servicios</a></li>

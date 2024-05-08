@@ -55,7 +55,7 @@ const Entrevistas = ({entrevistas, setEntrevistas}) => {
                 className={style.video}
                 width="560"
                 height="315"
-                src="https://www.youtube.com/watch?v=0gLODoXanog"
+                src="https://www.youtube.com/embed/NbnSynwqplU"
                 frameBorder="1"
                 allowFullScreen
               ></iframe>
@@ -66,7 +66,7 @@ const Entrevistas = ({entrevistas, setEntrevistas}) => {
                 className="video"
                 width="560"
                 height="315"
-                src="https://www.youtube.com/watch?v=0gLODoXanog"
+                src="https://www.youtube.com/embed/NbnSynwqplU"
                 frameBorder="0"
                 allowFullScreen
               ></iframe>

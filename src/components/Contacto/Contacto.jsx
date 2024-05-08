@@ -29,6 +29,7 @@ const Contacto = () => {
 
   return (
     <div className={styles.contacto}>
+      <div className={styles.zIndex}>
       <h2>Contacto</h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
@@ -80,6 +81,8 @@ const Contacto = () => {
         </div>
         <button className={styles.btn} type="submit">Enviar</button>
       </form>
+      </div>
+      
     </div>
   );
 };

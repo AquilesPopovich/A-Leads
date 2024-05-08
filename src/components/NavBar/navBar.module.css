@@ -41,7 +41,7 @@
 }
 
 /* Mostrar el botón de menú solo en dispositivos móviles */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .mobileMenuButton {
     display: flex; /* Mostrar el botón de menú en dispositivos móviles */
     cursor: pointer;
@@ -56,13 +56,14 @@
     display: none; /* Ocultar elementos de navegación por defecto */
   }
 
-  .navItems{
+  .navItems li{
     display: none;
   }
 
   .navItems.open, .links.open {
     display: block; /* Mostrar elementos de navegación cuando el menú está abierto */
   }
+  
 }
 
 

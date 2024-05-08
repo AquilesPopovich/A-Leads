@@ -10,6 +10,7 @@ const Menu = ({ menu, setMenu }) => {
   const [selectedIndicator, setSelectedIndicator] = useState(null); // Asumiendo que inicialmente no hay ningún indicador seleccionado
 
   const navItems = [
+    { title: "Inicio", href: "#Inicio" },
     
     { title: "Servicios", href: "#Servicios" },
     { title: "Clientes", href: "#Clientes" },
@@ -18,9 +19,7 @@ const Menu = ({ menu, setMenu }) => {
 
   if (!menu) return null;
 
-  const scrollToTop = () => {
-    document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+ 
 
   return (
     <motion.div
@@ -35,7 +34,6 @@ const Menu = ({ menu, setMenu }) => {
           <div className={styles.header}>
             <p>Menu</p>
           </div>
-          <button onClick={()=>scrollToTop}>Inicio</button>
           {navItems.map((data, index) => (
             <a
               key={index}
