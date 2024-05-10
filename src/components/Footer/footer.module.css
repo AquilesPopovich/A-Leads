@@ -1,17 +1,92 @@
-.container{
-    height: 70vh;
-    background-color: red;
-    position: relative;
+.container {
+    background-color: #fd0101;
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  .Divcontent {
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .DivcontentIMG img {
+    padding: 0px 30px;
+    border-radius: 15px;
+    width: 60px;
+  }
+
+  .DivcontentIMG {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   background-color: #aba1a1;
+  }
+
+  .contentLinks{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    margin: 20px 0 0 0;
-}
+  }
+  .contentLinks ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contentLinks ul li{
+    margin: 0px 10px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+  }
 
-.content{
-    height: 80%;
-    width: 80%;
+  .barraTop{
     border-top: 2px solid white;
-    padding: 25px 0;
-}
+    padding: 35px;
+  }
+
+  .contentLinks ul li:hover{
+    background-color: white;
+  }
+
+  .contentLinks ul li:hover .link{
+    color: rgb(255, 0, 0);
+  }
+
+
+  
+  .Divcontent h3 {
+    color: #ffffff;
+    font-size: 26px;
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+  
+  .Divcontent ul {
+    list-style: none;
+   
+    padding: 0;
+  }
+  
+  .Divcontent li {
+    margin-bottom: 5px;
+  }
+  
+  .link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
