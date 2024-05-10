@@ -10,13 +10,13 @@
   height: 80px;
   line-height: 80px;
   z-index: 100;
-  
+  background-color: white;
   position: fixed; /* Cambio */
   top: 0; /* Cambio */
 }
 
 .scrolled .nav {
-  background-color: #3d535f;
+  background-color: #ff0000;
 }
 
 .scrolled .navItems li a {
@@ -53,7 +53,7 @@
     background-color: #3d535f;
   }
   .navItems, .links {
-    display: none; /* Ocultar elementos de navegación por defecto */
+    display: flex; /* Ocultar elementos de navegación por defecto */
   }
 
   .navItems li{
@@ -106,6 +106,13 @@
   font-weight: 800;
   color: #3d535f;
   letter-spacing: 3px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid white;
+  justify-content: center;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -114,7 +121,7 @@ b{
   font-size: 70px;
   top: -10px;
   position: relative;
-  color: rgb(0, 228, 249);
+  color: rgb(255, 255, 255);
 }
   
 .navItems{
@@ -130,9 +137,9 @@ b{
 
 
 .navItems li a{
-  font-size: 25px;
+  font-size: 20px;
   color: #3d535f;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-decoration: none;
   cursor: pointer;
   text-transform: capitalize;
@@ -140,13 +147,17 @@ b{
 
 .navItems li:hover a,
 .link:hover{
-  color: rgb(0, 228, 249);
+  color: rgb(255, 255, 255);
 }
 
 .links a{
   font-size: 30px;
   color: #3d535f;
   margin: 25px 10px;
+}
+
+.links{
+  display: none;
 }
 
 .navItems li {
@@ -158,11 +169,11 @@ b{
   .navItems li::after {
     content: '';
     position: absolute;
-    bottom: 10px;
+    bottom: 22px;
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: rgb(0, 228, 249);
+    background-color: rgb(255, 255, 255);
     transition: width 0.3s;
   }
   

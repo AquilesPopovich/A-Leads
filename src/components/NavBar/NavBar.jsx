@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { AnimatePresence } from 'framer-motion';
 import Menu from '../menu/Menu';
+import imgLogo from '../../assets/logoPrueba.png'
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,15 +37,18 @@ const NavBar = () => {
   return (
     <div className={`${style.container} ${scrolled ? style.scrolled : ''}`}>
       <nav className={`${style.nav} ${scrolled ? style.scrolled : ''}`}>
-        <div className={style.logo}>A+Leads<b>.</b></div>
+        <div className={style.logo}><img src={imgLogo} alt="" /></div>
 
         
         
         <ul className={`${style.navItems} ${menu ? 'open' : ''}`}>
-          <li><a onClick={scrollToTop}>Inicio</a></li>
+          <li><a onClick={scrollToTop}> Por qué A+Leads?  </a></li>
+          <li><a href="">Conocenos</a></li>
           <li><a href="">Servicios</a></li>
-          <li><a href="">Testimonios</a></li>
+          <li><a href="">Casos de exitos</a></li>
+          <li><a href="">Inspiraciones</a></li>
           <li><a href="">Contacto</a></li>
+
         </ul>
         <div className={`${style.links} ${menu ? 'open' : ''}`}>
           <a className={style.link} href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a>

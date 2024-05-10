@@ -12,10 +12,16 @@ const Menu = ({ menu, setMenu }) => {
   const navItems = [
     { title: "Inicio", href: "#Inicio" },
     
-    { title: "Servicios", href: "#Servicios" },
-    { title: "Clientes", href: "#Clientes" },
-    { title: "Contacto", href: "#Contacto" }
+    { title: "Por qué A+Leads? ", href: "#Servicios" },
+    { title: "Conocenos", href: "#About" },
+    { title: "Servicios", href: "#Ofrecemos" },
+    { title: "Inspiraciones", href: "#Inspiraciones" },
+    { title: "Contacto", href: "#Contacto" },
+
+
   ];
+
+
 
   if (!menu) return null;
 

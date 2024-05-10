@@ -1,40 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shantell+Sans:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Permanent+Marker&family=Shantell+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 .container {
     width: 100%;
+    transition: 2s;
+    font-family: "Inter", sans-serif;
     min-height: 100vh;
-    background-color: #f3f5f8;
+    background-color: #f00909;
     overflow: hidden;
   }
   
+  .container.background-white {
+    transition: 2s;
+    background-color: rgb(242, 229, 229); /* Cambia el fondo a blanco */
+
+  }
+  
+  .linkedin{
+    color: blue;
+  }
+  
+  
   .wrapper {
     display: flex;
-    width: 100%;
+    overflow-x: hidden;
+    width: 100vw;
     height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
+    max-width: 100vw;
+    position: absolute;
     padding: 0 10%;
     overflow: hidden;
-    position: fixed; /* Cambio */
     bottom: 0; /* Cambio */
     transition: filter 0.3s ease; /* Agregado */
   }
   
-  .wrapper.blur {
-    filter: blur(5px); /* Agregado */
-    z-index: 0;
-  }
+  
 .wrapper::before{
     position: absolute;
     content: '';
     height: 600px;
     width: 600px;
     border-radius: 50%;
-    left: -12%;
-    top: 40%;
-    background: linear-gradient(45deg, #ee00ff, rgb(0, 228, 249));
-    animation: object1 12s linear infinite;
+    left: 0%;
+    top: 41%;
+    background: linear-gradient(45deg, #ff0000, rgb(255, 255, 255));
+    animation: object1 20s linear infinite;
 }
 
 .wrapper::after{
@@ -43,10 +54,10 @@
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    left: 35%;
-    top: 12%;
-    background: linear-gradient(45deg, #ee00ff, rgb(0, 228, 249));
-    animation: object2 12s linear infinite;
+    left: 65%;
+    top: 0%;
+    background: linear-gradient(45deg, #ff0000, rgb(255, 255, 255));
+    animation: object2 20s linear infinite;
 }
 
 
@@ -54,20 +65,25 @@
 
 @keyframes object1{
     50%{
-        left: 35%;
-        top: 10%;
+        left: 65%;
+        top: 0%;
     }
 }
 
 @keyframes object2{
     50%{
-        left: -13%;
+        left: 0%;
         top: 41%;
     }
 }
 
 .cols{
     width: 50%;
+}
+
+.col1{
+    display: flex;
+    align-items: center;
 }
 
 .col0{
@@ -94,21 +110,20 @@
     height: 4px;
     width: 45px;
     bottom: 10px;
-  background-color: rgb(0, 228, 249);
+  background-color: rgb(249, 0, 0);
 }
 
 .h1Index{
     display: block;
-    font-size: 5em;
+    font-size: 3em;
     font-weight: 900;
     color: #3d535f;
 
 }
 
 .multiText{
-  color: rgb(0, 228, 249);
+  color: rgb(252, 252, 252);
   text-transform: capitalize;
-  border-right: .15em solid rgb(0, 228, 249);
   white-space: nowrap;
   overflow: hidden;
   animation: 
@@ -164,26 +179,27 @@
 .btns{
     width: 100%;
     position: relative;
-    left: 150px;
 }
 
 .btns button{
     outline: none;
-    border: none;
+    border: 2px solid white;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     color: #fff;
-    background-color: #3d535f;
+    background-color: transparent;
     padding: 8px 14px;
     margin: 40px 5px;
     letter-spacing: 2px;
     text-transform: capitalize;
+    border-radius: 30px;
     box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
 
 .btns button:hover{
-    background-color: rgb(0, 228, 249);
+    background-color: rgb(255, 255, 255);
+    color: red;
 }
 
 .imgbox{

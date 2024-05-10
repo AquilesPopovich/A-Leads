@@ -1,0 +1,75 @@
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container div {
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .cardContainers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+    position: relative;
+
+  }
+  
+  .card img {
+    width: 250px;
+    height: 250px;
+    transition: filter 0.3s ease; /* Añadido */
+    border-radius: 8px;
+
+  }
+  
+  .cardImageFocused {
+    filter: brightness(70%) grayscale(70%); /* Añadido */
+  }
+  
+  .card h3 {
+    color: rgb(255, 0, 0);
+    position: absolute;
+    z-index: 10;
+    top: 10px; /* Añadido */
+    left: 10px; /* Añadido */
+  }
+  
+  .btnDiv {
+    display: none;
+    
+    transform: translate(-50%, -50%); /* Añadido */
+  }
+  
+  .btn {
+    background-color: red;
+    width: 195px;
+    height: 125px;
+    display: block;
+    position: absolute;
+    top: 62px;
+    right: 353px;
+    z-index: 200;
+    transition: transform 0.3s ease; /* Añadido */
+  }
+  
+  .card:hover .btnDiv,
+  .btn {
+    transform: translate(-50%, -50%) scale(1.1); /* Añadido */
+  }
+  

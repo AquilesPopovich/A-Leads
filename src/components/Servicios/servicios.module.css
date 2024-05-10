@@ -1,79 +1,74 @@
 .container{
-    background-color: #3d535f;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    z-index: 0;
+    position: relative;
+    
     margin-top: 100vh;
 }
 
-
-.col1{
-    z-index: 5;
-    width: 60%;
-    margin-left: 10px;
-}
-
 .content{
-    z-index: 12;
-    background-color: #3d535f;
-    width: 100%;
+    flex-direction: row;
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-}
-
-.col0{
-    width: 40%;
-
-}
-
-.check{
-    margin: 5% 2%;
-    border: 3px solid  #f3f5f8;
-    border-radius: 28px;
-    width: 80%;
-    font-size: 24px;
-    font-weight: 600;
-    color: #f3f5f8;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
-.tilde{
-    color: rgb(0, 255, 0);
-    font-size: 32px;
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid  #f3f5f8;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 50%;
-}
-
-.contTildes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imgbox{
-    margin: 30px;
+.contH2{
     position: relative;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(45deg, #ee00ff, rgb(0, 228, 249));
-    border-radius: 30px;
+    right: 25%;
+    color: red;
+}
+
+.card{
+    margin: 0px 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 340px;
+    height: 480px;
+    padding: 0px 10px 30px 10px;
+    border: 0.5px solid rgb(150, 147, 147);
+}
+
+.card:hover{
+    border: 1px solid red;
+    background-color: white;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.textArea{
     align-items: center;
 }
 
-.imgbox .imgArmu{
-   
-    position: relative;
-    height: 100%;
-    border-radius: 30px;
-    width: 99%;
-    padding: 2px;
+.textArea p{
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.card img{
+    scale: 0.6;
+    width: 280px;
+    height: fit-content;
+}
+
+.contImg{
+    display: flex;
+    justify-content: center;
+    
+    height: 200px;
+    align-items: center;
+}
+
+.card h3{
+    
+    text-align: center;
+    color: red;
+    font-size: 28px;
 }

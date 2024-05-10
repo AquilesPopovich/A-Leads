@@ -1,126 +1,88 @@
 import React, { useState } from 'react';
-import style from './clientes.module.css';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import { TiChartLineOutline } from 'react-icons/ti';
+import style from './clientes.module.css'; 
 
 const Clientes = () => {
-    const [clienteIndex, setClienteIndex] = useState(0);
-    
-    const infoClientes = [
-        {
-            "clientes1": true,
-            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s',
-            "videoTestimonio": "videoasadsa",
-            "empresa": 'Microsoft',
-            "resultado": "Aumenté las ventas en un 60%",
-            "posicion": "Satya Nadella, CEO de Microsoft"
-        },
-        {
-            "clientes2": true,
-            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
-            "videoTestimonio": "videoasadsa",
-            "empresa": 'Amazon',
-            "resultado": "Aumenté las ventas en un 80%",
-            "posicion": "Jeff Bezos, CEO de Amazon"
-        },
-        {
-            "clientes1": true,
-            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s',
-            "videoTestimonio": "adsa",
-            "empresa": 'thi',
-            "resultado": "Aumenté las ventas en un 80%",
-            "posicion": "Jeff Bezos, CEO de Amazon"
-        },
-        {
-            "clientes2": true,
-            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
-            "videoTestimonio": "videoasadsa",
-            "empresa": 'linkedin',
-            "resultado": "Aumenté las ventas en un 80%",
-            "posicion": "Jeff Bezos, CEO de Amazon"
-        },
-        {
-            "clientes2": true,
-            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
-            "videoTestimonio": "videoasadsa",
-            "empresa": 'linkedin',
-            "resultado": "Aumenté las ventas en un 80%",
-            "posicion": "Jeff Bezos, CEO de Amazon"
-        },
-        {
-            "clientes2": true,
-            "img": 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9GofN6QfVnhS6HUqvl6QAaKYm9EHGtOXOR2mAZzJyg&s',
-            "videoTestimonio": "videoasadsa",
-            "empresa": 'linkedin',
-            "resultado": "Aumenté las ventas en un 80%",
-            "posicion": "Jeff Bezos, CEO de Amazon"
-        }
-    ];
 
-    const handleNextCliente = () => {
-        setClienteIndex((prevIndex) => (prevIndex === infoClientes.length - 1 ? 0 : prevIndex + 1));
-    };
+  const [seleccionado, setSeleccionado] = useState(null); // Inicializa seleccionado como null
 
-    const handlePrevCliente = () => {
-        setClienteIndex((prevIndex) => (prevIndex === 0 ? infoClientes.length - 1 : prevIndex - 1));
-    };
+  const clientesInfo = [{
+    name: "hola",
+    tiempo: "7 meses",
+    Resultado: "Aumente las ventas en un 90%",
+    imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s",
+    urlTestimonio: "" 
+      },{
+    name: "bgp",
+    tiempo: "2 meses",
+    Resultado: "Aumente las ventas en un 90%",
+    imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s",
+    urlTestimonio: "" 
+      },{
+    name: "mine",
+    tiempo: "3 meses",
+    Resultado: "Aumente las ventas en un 90%",
+    imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s",
+    urlTestimonio: "" 
+      },{
+    name: "rara",
+    tiempo: "1 mes",
+    Resultado: "Aumente las ventas en un 90%",
+    imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s",
+    urlTestimonio: "" 
+      },{
+    name: "lla",
+    tiempo: "6 meses",
+    Resultado: "Aumente las ventas en un 90%",
+    imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s",
+    urlTestimonio: "" 
+      },{
+        name: "d",
+        tiempo: "9 meses",
+        Resultado: "Aumente las ventas en un 90%",
+        imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBg59LNMeZr1VIsx1KJD0yROPeEzm5wWrU09cHhu1xbQ&s",
+        urlTestimonio: "" 
+      }]
 
-    const centralIndex = clienteIndex % infoClientes.length;
-    const prevIndex = (centralIndex - 1 + infoClientes.length) % infoClientes.length;
-    const nextIndex = (centralIndex + 1) % infoClientes.length;
-
-    return (
-        <div className={style.containerClientes}>
-                <button onClick={handlePrevCliente}><ArrowBackIosNewIcon/></button>
-                
-            <div className={style.contenedor}>
-                <div className={`${style.cliente}`}>
-                    <div className={style.clienteNoActive}>
-
-                    <div className={`${style.cols} ${style.col0}`}>
-                        <img src={infoClientes[prevIndex].img} alt="" />
-                    </div>
-                    <div className={`${style.cols} ${style.col1}`}>
-                        <h2 className={style.hola}>Experiencia con {infoClientes[prevIndex].empresa}</h2>
-                        <p className={style.hola}><b className={style.hola}>Resultados:</b> {infoClientes[prevIndex].resultado}</p>
-                        <button>Mira el testimonio de {infoClientes[prevIndex].posicion} aquí</button>
-                    </div>
-                    </div>
-
-                </div>
-                <div className={`${style.cliente} ${style.clienteActive}`}>
-                
-                    <div className={`${style.cols} ${style.col0}`}>
-                        <img src={infoClientes[centralIndex].img} alt="" />
-                    </div>
-                    <div className={`${style.cols} ${style.col1}`}>
-
-                        <h2 className={style.hola}>Experiencia con {infoClientes[centralIndex].empresa}</h2>
-                        <p className={style.hola}><b className={style.hola}>Resultados:</b> {infoClientes[centralIndex].resultado}</p>
-                        <button>Mira el testimonio de {infoClientes[centralIndex].posicion} aquí</button>
-
-                    </div>
-                </div>
-                <div className={`${style.cliente}`}>
-                
-                <div className={style.clienteNoActive}>
-                
-                    <div className={`${style.cols} ${style.col0}`}>
-                        <img src={infoClientes[nextIndex].img} alt="" />
-                    </div>
-                    <div className={`${style.cols} ${style.col1}`}>
-                        <h2 className={style.hola}>Experiencia con {infoClientes[nextIndex].empresa}</h2>
-                        <p className={style.hola}><b className={style.hola}>Resultados:</b> {infoClientes[nextIndex].resultado}</p>
-                        <button>Mira el testimonio de {infoClientes[nextIndex].posicion} aquí</button>
-                    </div>
-                    </div>
-                </div>
-
+  return (
+    <div className={style.container}>
+      <div className={`${style.cols} ${style.col0}`}>
+        {seleccionado ? (
+          <>
+          <div>
+            <img src={seleccionado.imgEmpresa} alt="" />
+            <h2>{seleccionado.name}</h2>
+            <p>{seleccionado.tiempo}</p>
+            <p>{seleccionado.Resultado}</p>
+            <button>Ver testimonio</button>
             </div>
-                <button className={style.siguiente} onClick={handleNextCliente}><ArrowForwardIosIcon/></button>
-           
-        </div>
-    );
-};
+          </>
+        ) : (
+          <>
+          <div>
+
+            <img src={clientesInfo[0].imgEmpresa} alt="" />
+            <h2>{clientesInfo[0].name}</h2>
+            <p>{clientesInfo[0].tiempo}</p>
+            <p>{clientesInfo[0].Resultado}</p>
+            <button>Ver testimonio</button>
+          </div>
+
+          </>
+        )}
+      </div>
+      <div className={`${style.cols} ${style.col1}`}>
+        {clientesInfo.map((cliente, index) => {
+          return (
+            <div key={index} className={style.card} onClick={() => setSeleccionado(cliente)}>
+              <img src={cliente.imgEmpresa} alt={cliente.name} />
+              <h3>{cliente.name}</h3>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
 
 export default Clientes;
