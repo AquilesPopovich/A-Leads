@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import style from './ofrecemos.module.css';
+import Modal from '../modal/Modal';
 
 const Ofrecemos = () => {
   const [focusedIndex, setFocusedIndex] = useState(null);
+  const [selectedInfo, setSelectedInfo] = useState(null)
+  const [saberMas, setSaberMas] = useState(false)
 
   const info = [
     {
@@ -39,7 +42,7 @@ const Ofrecemos = () => {
 
   return (
     <div className={style.container}>
-      Soluciones
+      <h2 className={style.Soluciones}>Soluciones</h2>
       <div className={style.cardContainers}>
         {info.map((servicio, index) => (
           <div
@@ -56,12 +59,16 @@ const Ofrecemos = () => {
             <h3>{servicio.name}</h3>
             {focusedIndex === index && (
               <div className={style.btnDiv}>
-                <button className={style.btn}>Saber más</button>
+                <button onClick={()=> {
+                  setSaberMas(true)
+                  setSelectedInfo(servicio)
+                }} className={style.btn}>Saber más</button>
               </div>
             )}
           </div>
         ))}
       </div>
+      <Modal saberMas={saberMas} selectedInfo={selectedInfo} setSaberMas={setSaberMas} />
     </div>
   );
 };
