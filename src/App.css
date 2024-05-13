@@ -2,6 +2,7 @@
 
 .container {
     width: 100%;
+    max-width: 100vw;
     transition: 2s;
     font-family: "Inter", sans-serif;
     min-height: 100vh;
@@ -17,22 +18,20 @@
   
   .linkedin{
     color: blue;
+    
   }
   
   
   .wrapper {
     display: flex;
-    overflow-x: hidden;
-    width: 100vw;
+    max-width: 100vw;
     height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
-    max-width: 100vw;
     position: absolute;
     padding: 0 10%;
-    overflow: hidden;
-    bottom: 0; /* Cambio */
-    transition: filter 0.3s ease; /* Agregado */
+    bottom: 0;
+    transition: filter 0.3s ease;
   }
   
   
@@ -54,7 +53,7 @@
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    left: 65%;
+    left: 85%;
     top: 0%;
     background: linear-gradient(45deg, #ff0000, rgb(255, 255, 255));
     animation: object2 20s linear infinite;
@@ -65,7 +64,7 @@
 
 @keyframes object1{
     50%{
-        left: 65%;
+        left: 85%;
         top: 0%;
     }
 }
@@ -118,6 +117,8 @@
     font-size: 3em;
     font-weight: 900;
     color: #3d535f;
+    width: 100%;
+     white-space: nowrap; /* Evita que el texto se desborde horizontalmente */
 
 }
 
@@ -149,13 +150,24 @@
 .scrollButtons button{
     background-color: #3d535f;
     display: flex;
+    border-radius: 50%;
+    border: none;
     align-items: center;
     color: white;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
     padding: 10px;
     font-size: 28px;
     font-weight: 800;
     width: 40px;
+    cursor: pointer;
     height: 40px;
+}
+
+.scrollButtons button:hover{
+    outline: 2px solid red;
+    color: red;
 }
 
 @keyframes typing {

@@ -1,6 +1,7 @@
 .container{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -22,17 +23,21 @@
 .contH2{
     position: relative;
     right: 25%;
-    color: red;
+    color: #3d535f;
+    font-size: 25px;
 }
 
 .card{
-    margin: 0px 10px;
+    margin: 10px 10px;
     display: flex;
     flex-direction: column;
     width: 340px;
     height: 480px;
     padding: 0px 10px 30px 10px;
     border: 0.5px solid rgb(150, 147, 147);
+    box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+    -moz-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
 }
 
 .card:hover{

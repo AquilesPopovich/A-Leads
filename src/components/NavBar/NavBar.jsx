@@ -40,21 +40,16 @@ const NavBar = () => {
         <div className={style.logo}><img src={imgLogo} alt="" /></div>
 
         
-        
         <ul className={`${style.navItems} ${menu ? 'open' : ''}`}>
-          <li><a onClick={scrollToTop}> Por qué A+Leads?  </a></li>
-          <li><a href="">Conocenos</a></li>
-          <li><a href="">Servicios</a></li>
-          <li><a href="">Casos de exitos</a></li>
-          <li><a href="">Inspiraciones</a></li>
-          <li><a href="">Contacto</a></li>
+        <li><a onClick={scrollToTop}> Inicio  </a></li>
+          <li><a href="#About">Conocenos</a></li>
+          <li><a href="#Ofrecemos">Servicios</a></li>
+          <li><a href="#Clientes">Casos de exitos</a></li>
+          <li><a href="#Inspired">Inspiraciones</a></li>
+          <li><a href="#Contacto">Contacto</a></li>
 
         </ul>
-        <div className={`${style.links} ${menu ? 'open' : ''}`}>
-          <a className={style.link} href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a>
-          <a className={style.link} href="https://www.instagram.com/armeldeamorrortu/"><FontAwesomeIcon icon={faInstagram} /></a>
-          <a className={style.link} href=""><FontAwesomeIcon icon={faWhatsapp} /></a>
-        </div>
+       
         <div className={style.mobileMenuButton} onClick={toggleMenu}>
           <div className={`${style.burger} ${menu ? style.burgerActive : ""}`}></div>
         </div>

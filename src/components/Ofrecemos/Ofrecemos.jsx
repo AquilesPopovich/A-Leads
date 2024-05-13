@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './ofrecemos.module.css';
 import Modal from '../modal/Modal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Ofrecemos = () => {
   const [focusedIndex, setFocusedIndex] = useState(null);
@@ -25,27 +27,22 @@ const Ofrecemos = () => {
     },
     {
       img: "https://i.pinimg.com/originals/e7/46/e7/e746e741bae70a90dc51795b0a48508c.jpg",
-      name: "Talent Acquisition",
-      detalle: "rasdadssa"
-    },
-    {
-      img: "https://i.pinimg.com/originals/e7/46/e7/e746e741bae70a90dc51795b0a48508c.jpg",
-      name: "Talent Acquisition",
-      detalle: "rasdadssa"
-    },
-    {
-      img: "https://i.pinimg.com/originals/e7/46/e7/e746e741bae70a90dc51795b0a48508c.jpg",
       name: "Trainings",
       detalle: "qasxaxsa"
     }
   ];
+
+  useEffect(() => {
+    AOS.init({
+    });
+  }, []);
 
   return (
     <div className={style.container}>
       <h2 className={style.Soluciones}>Soluciones</h2>
       <div className={style.cardContainers}>
         {info.map((servicio, index) => (
-          <div
+          <div 
             className={style.card}
             onMouseEnter={() => setFocusedIndex(index)}
             onMouseLeave={() => setFocusedIndex(null)}

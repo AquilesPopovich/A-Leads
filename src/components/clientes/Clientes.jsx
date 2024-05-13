@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TiChartLineOutline } from 'react-icons/ti';
 import style from './clientes.module.css'; 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Clientes = () => {
 
   const [seleccionado, setSeleccionado] = useState(null); // Inicializa seleccionado como null
+
+  useEffect(() => {
+    AOS.init({
+    });
+  }, []);
 
   const clientesInfo = [{
     name: "hola",
@@ -53,7 +60,7 @@ const Clientes = () => {
 
   return (
     <div className={style.container}>
-      <div className={`${style.cols} ${style.col0}`}>
+      <div data-aos="fade-up" className={`${style.cols} ${style.col0}`}>
         {seleccionado ? (
           <>
           <div className={style.cardGrande}>
@@ -86,7 +93,7 @@ const Clientes = () => {
         <div className={style.cards}>
         {clientesInfo.map((cliente, index) => {
           return (
-            <div key={index} className={style.card} onClick={() => setSeleccionado(cliente)}>
+            <div data-aos="fade-up" key={index} className={style.card} onClick={() => setSeleccionado(cliente)}>
               <img src={cliente.imgEmpresa} alt={cliente.name} />
               <h3>{cliente.name}</h3>
             </div>

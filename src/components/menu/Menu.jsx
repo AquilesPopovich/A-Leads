@@ -51,9 +51,7 @@ const Menu = ({ menu, setMenu }) => {
             </a>
           ))}
            <div>
-          <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
-          <a href=""><FontAwesomeIcon icon={faInstagram} /></a>
-          <a href=""><FontAwesomeIcon icon={faWhatsapp} /></a>
+         
         </div>
         </div>
       </div>

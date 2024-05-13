@@ -20,7 +20,11 @@
 }
 
 .scrolled .navItems li a {
-  color: #fff;
+  color: rgb(255, 214, 214);
+}
+
+.scrolled .navItems li:hover a {
+  color: white;
 }
 
 .scrolled .logo {

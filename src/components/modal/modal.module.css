@@ -1,6 +1,6 @@
 /* modal.module.css */
 .modalBackdrop {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -11,10 +11,27 @@
     align-items: center;
     z-index: 9999; /* Asegura que esté por encima de todo */
   }
+
+  .contentBtn{
+    display: flex;
+    justify-content: end;
+    padding: 0px 5px 10px;
+  }
+
+  .closeButton{
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
   
   .modalContent {
     background-color: white;
     border-radius: 10px;
+    z-index: 9999;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
   }

@@ -1,64 +1,89 @@
-.contacto {
-   width: 100%;
-   background-color: transparent;
-   display: flex;
-   justify-content: center;
-  }
-  
-  .contacto h2 {
-    margin-bottom: 20px;
-  }
-  
-  .formGroup {
-    margin-bottom: 15px;
-    z-index: 200;
+.container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
-  }
+}
 
-  .zIndex{
-    margin-top: 20px;
-    padding: 20px;
-    width: 80%;
-    border: 1px solid #ccc;
-    color: white;
-    border-radius: 5px;
-    background-color: rgba(62, 60, 60, 0.7);
-    
-    position: relative;
-  }
+.content{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  border-radius: 8px;
+  padding: 60px 20px;
+  box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+-webkit-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+-moz-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+  align-items: center;
+  color: red;
+}
 
+.cols{
+  width: 50%;
+}
+
+.col0 {
+  text-align: start;
+  padding: 25px 60px;
+}
+
+.col0 h2{
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 500;
   
+}
+
+.col0 p{
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 400;
   
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input,
-  select,
-  textarea {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  textarea {
-    height: 100px;
-  }
-  
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+.col1{ 
+  display: flex;
+  justify-content: center;
+}
+
+.col1 form{
+  display: flex;
+  width: 100%;
+  padding: 0px 30px;
+  flex-direction: column;
+}
+
+
+.col1 form button{
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.col1 form button:hover{
+  background: gray;
+  transition: 1s;
+}
+
+.col1 form label{
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding: 7px 0;
+}
+
+.col1 form input{
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: red;
+  padding-bottom: 10px;
+  border-bottom: 2px solid red;
+  border-radius: 3px;
+}

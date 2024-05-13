@@ -2,13 +2,14 @@
     height: 100vh;
     position: fixed;
     right: 0;
+    width: 500px;
     top: 0;
     background-color: #3d535f;
     color: #f3f5f8;
     .body{
         box-sizing: border-box;
         height: 100%;
-        padding: 100px;
+        padding: 0 0px 0 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -19,18 +20,15 @@
             display: flex;
             flex-direction: column;
             font-size: 56px;
-            gap: 12px;
             margin-top: 80px;
     color: #f3f5f8;
 
 
             .header{
     color: #f3f5f8;
-                
                 border-bottom: 1px solid rgb(153, 153, 153);
                 text-transform: uppercase;
-                font-size: 11px;
-                margin-bottom: 40px;
+                font-size: 21px;
             }
             .header p{
     color: #f3f5f8;
@@ -40,7 +38,8 @@
             a{
                 text-decoration: none;
     color: #f3f5f8;
-                
+
+                font-size: 14px;
                 font-weight: 300;
             }
             
