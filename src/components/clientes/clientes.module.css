@@ -18,7 +18,7 @@
 .btnTestimonio{
   border: none;
   background-color: white;
-  width: 100%;
+  padding: 12px 16px;
 }
 
 .test{
@@ -65,8 +65,9 @@ flex-wrap: wrap;
 }
 
 .cardGrande{
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin: 0 10px 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +90,7 @@ flex-wrap: wrap;
 
 .cardGrande p{
   font-size: 15px;
+  padding: 10px;
   font-weight: 600;
   color: black;
 }
@@ -101,7 +103,10 @@ flex-wrap: wrap;
   color: rgb(255, 0, 0);
   padding: 12px 16px;
   border-radius: 10px;
-  transition: 2s;
+  transition: 1s;
+  box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+  -webkit-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+  -moz-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
 
 }
 
@@ -109,7 +114,7 @@ flex-wrap: wrap;
   border: 2px solid rgb(255, 0, 0);
   color: rgb(255, 0, 0);
   background-color: rgb(0, 0, 0);
-  transition: 2s;
+  transition: 1s;
 }
 
 .col1 {

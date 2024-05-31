@@ -8,20 +8,18 @@
     min-height: 100vh;
     background-color: #f00909;
     overflow: hidden;
-  }
-  
-  .container.background-white {
+}
+
+.container.background-white {
     transition: 2s;
     background-color: rgb(242, 229, 229); /* Cambia el fondo a blanco */
+}
 
-  }
-  
-  .linkedin{
+.linkedin {
     color: blue;
-    
-  }
+}
 
-  .switch {
+.switch {
     width: 50px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -30,9 +28,9 @@
     border-radius: 50px;
     padding: 10px;
     cursor: pointer;
-  }
+}
 
-  .divBtn{
+.divBtn {
     display: flex;
     z-index: 100;
     padding: 5px;
@@ -46,34 +44,35 @@
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50px;
     right: 0;
-  }
-  
-  .switch[data-isOn="true"] {
+}
+
+.switch[data-isOn="true"] {
     justify-content: flex-end;
-  }
-  
-  .handle {
+}
+
+.handle {
     width: 30px;
     height: 30px;
     background-color: rgb(255, 0, 0);
     border-radius: 40px;
-  }
-  
-  
-  .wrapper {
+}
+
+.wrapper {
     display: flex;
     max-width: 100vw;
     height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
-    position: absolute;
+    height: 100vh;
+    position: relative; /* Cambiado de absolute a relative */
     padding: 0 10%;
     bottom: 0;
     transition: filter 0.3s ease;
-  }
-  
-  
-.wrapper::before{
+    overflow: hidden; /* Asegura que el contenido que se salga no cause scroll */
+}
+
+/* aca los objetos */
+.wrapper::before {
     position: absolute;
     content: '';
     height: 600px;
@@ -85,7 +84,7 @@
     animation: object1 20s linear infinite;
 }
 
-.wrapper::after{
+.wrapper::after {
     position: absolute;
     content: '';
     height: 200px;
@@ -97,104 +96,109 @@
     animation: object2 20s linear infinite;
 }
 
-
-  
-
-@keyframes object1{
-    50%{
-        left: 85%;
+@keyframes object1 {
+    0%,
+    100% {
+        left: 0%;
+        top: 41%;
+    }
+    50% {
+        left: 50%; /* Ajustado para que no se salga del viewport */
         top: 0%;
     }
 }
 
-@keyframes object2{
-    50%{
-        left: 0%;
+@keyframes object2 {
+    0%,
+    100% {
+        left: 85%;
+        top: 0%;
+    }
+    50% {
+        left: 35%; /* Ajustado para que no se salga del viewport */
         top: 41%;
     }
 }
 
-.cols{
+/* Resto del código CSS */
+
+.cols {
     width: 50%;
 }
 
-.col1{
+.col1 {
     display: flex;
     align-items: center;
 }
 
-.col0{
+.col0 {
     z-index: 5;
 }
 
-.topline{
+.topline {
     display: block;
     position: relative;
     font-size: 35px;
     letter-spacing: 5px;
     color: #3d535f;
-
 }
 
-.btnA{
+.btnA {
     text-decoration: none;
     color: #f3f5f8;
 }
 
-.topline::after{
+.topline::after {
     position: absolute;
     content: '';
     height: 4px;
     width: 45px;
     bottom: 10px;
-  background-color: rgb(249, 0, 0);
+    background-color: rgb(249, 0, 0);
 }
 
-.h1Index{
+.h1Index {
     display: block;
     font-size: 3em;
     font-weight: 900;
     color: #3d535f;
     width: 100%;
-     white-space: nowrap; /* Evita que el texto se desborde horizontalmente */
-
+    white-space: nowrap; /* Evita que el texto se desborde horizontalmente */
 }
 
-.multiText{
-  color: rgb(252, 252, 252);
-  text-transform: capitalize;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+.multiText {
+    color: rgb(252, 252, 252);
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
 }
 
 .fade-out {
-  animation: 
-    deleting 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    animation: 
+        deleting 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
 }
 
-.scrollButtons{
+.scrollButtons {
     cursor: pointer;
     position: fixed;
     z-index: 1000;
     bottom: 0;
-   
     right: 0;
 }
 
-.lenguajeButton{
+.lenguajeButton {
     cursor: pointer;
     position: fixed;
     z-index: 1000;
     top: 0;
-   
     right: 0;
 }
 
-.lenguajeButton button{
+.lenguajeButton button {
     background-color: #3d535f;
     display: flex;
     border-radius: 50%;
@@ -212,7 +216,7 @@
     height: 40px;
 }
 
-.scrollButtons button{
+.scrollButtons button {
     background-color: #3d535f;
     display: flex;
     border-radius: 50%;
@@ -230,7 +234,7 @@
     height: 40px;
 }
 
-.scrollButtons button:hover{
+.scrollButtons button:hover {
     outline: 2px solid red;
     color: red;
 }
@@ -238,27 +242,26 @@
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
-  
-  @keyframes deleting {
+}
+
+@keyframes deleting {
     from { width: 100%; }
     to { width: 0; }
-  }
-  
+}
 
-.parrafoIndex{
+.parrafoIndex {
     display: block;
     width: 90%;
     font-size: 1.2em;
     color: #3d535f;
 }
 
-.btns{
+.btns {
     width: 100%;
     position: relative;
 }
 
-.btns button{
+.btns button {
     outline: none;
     border: 2px solid white;
     cursor: pointer;
@@ -274,27 +277,27 @@
     box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
 
-.btns button a{
+.btns button a {
     text-decoration: none;
     color: #f3f5f8;
 }
 
-.btns button:hover a{
+.btns button:hover a {
     color: red;
 }
 
-.btns button:hover{
+.btns button:hover {
     background-color: rgb(255, 255, 255);
     color: red;
 }
 
-.imgbox{
+.imgbox {
     position: relative;
     height: 100%;
     width: 100%;
 }
 
-.imgbox .imgArmu{
+.imgbox .imgArmu {
     position: relative;
     height: 100%;
     width: calc(80% - 80px);
@@ -303,18 +306,41 @@
     animation: animateUser 6s linear infinite;
 }
 
-@keyframes animateUser{
-    50%{
+@keyframes animateUser {
+    50% {
         right: 30px;
         top: -80px;
     }
 }
 
-.imgbox #splash{
+.imgbox #splash {
     position: absolute;
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
     width: 100%;
     filter: saturate(200%);
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper .cols {
+        width: 100%;
+    }
+    .wrapper .col1 {
+        display: none;
+    }
+    .wrapper .col0 {
+        width: 100%;
+        display: block;
+    }
+    .wrapper {
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .h1Index {
+        font-size: 30px;
+        width: 100%;
+    }
 }

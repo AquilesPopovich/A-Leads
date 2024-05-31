@@ -13,7 +13,7 @@ const Contacto = ({ language }) => {
     <div className={style.container}>
       <div className={style.content}>
         <div className={`${style.cols} ${style.col0}`}>
-          <h2>{language === 'es' ? 'Contáctanos' : 'Contact Us'}</h2>
+          <h2 className={style.h2C}>{language === 'es' ? 'Contáctanos' : 'Contact Us'}</h2>
           <p>{language === 'es' ? 'Primer paso para automatizar tu generación de leads.' : 'Ready to take the next step toward success?'}</p>
         </div>
         <div className={`${style.cols} ${style.col1}`}>

@@ -4,7 +4,7 @@ import style from './inspired.module.css'
 const Inspired = ({language}) => {
 
   const inspiraciones = [{
-    name: "Blog",
+    name: "Free Course",
     img: "https://fiter.io/wp-content/uploads/Why-Fiter-01-1-in-Fineract-implementations-.png",
     link: "https://hotmart.com/es/club/curso-de-setter-y-ventas-en-linkedin"
 }, {

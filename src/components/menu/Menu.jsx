@@ -45,7 +45,10 @@ const Menu = ({ menu, setMenu }) => {
               key={index}
               href={data.href} // Asumiendo que href se utiliza para definir el enlace
               className={selectedIndicator === data.href ? styles.active : ''}
-              onClick={() => setSelectedIndicator(data.href)}
+              onClick={() =>{
+                setSelectedIndicator(data.href)
+                setMenu(false)
+              } }
             >
               {data.title}
             </a>

@@ -98,9 +98,9 @@ function App() {
           <div data-aos-duration="1500" data-aos="fade-right" className="cols col0">
             <h1 className='h1Index'>
               <span className='linkedin'>{language === 'es' ? 'Linkedin' : 'LinkedIn'}</span> {' '} <br />
-              <span className={`multiText`}>{language === 'es' ? 'Nuestra' : 'Our'} </span> plataforma,
+              <span className={`multiText`}>{language === 'es' ? 'Nuestra' : 'Our'} </span> plataform,
               <br />
-              <span className={`multiText`}>{language === 'es' ? 'Tus' : 'Your'} </span> clientes
+              <span className={`multiText`}>{language === 'es' ? 'Tus' : 'Your'} </span> clients
             </h1>
 
             <div className="btns">

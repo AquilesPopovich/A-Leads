@@ -25,7 +25,10 @@ const About = ({language}) => {
               : 'Originated in Buenos Aires, Argentina, the company has a wide reach across the continents of South America, North America, Europe, and the Middle East.'}
           </p>
           <button className={style.btn}>
+            <a className={style.linkC} href="#Contacto">
             {language === 'es' ? 'Contáctanos' : 'Contact Us'}
+
+            </a>
           </button>
         </div>
         <div className={`${style.cols} ${style.col1}`}></div>

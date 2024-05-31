@@ -1,71 +1,58 @@
-.container{
+.container {
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-
 }
 
-.content{
+.content {
   width: 80%;
   height: 80%;
   display: flex;
   border-radius: 8px;
   padding: 60px 20px;
   box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
--webkit-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
--moz-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+  -webkit-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
+  -moz-box-shadow: 13px 13px 20px -3px rgba(0,0,0,0.51);
   align-items: center;
   color: red;
 }
 
-@media screen and (max-width: 1003px) {
-  .content{
-  flex-wrap: wrap;
-
-  }
-   
- }
-
-.cols{
+.cols {
   width: 50%;
 }
 
 .col0 {
- 
   text-align: start;
   padding: 5px 60px;
 }
 
-.col0 h2{
+.col0 h2 {
   font-size: 50px;
   letter-spacing: 2px;
   font-weight: 500;
-  
 }
 
-.col0 p{
+.col0 p {
   font-size: 30px;
   letter-spacing: 1px;
   font-weight: 400;
-  
 }
 
-.col1{ 
+.col1 {
   display: flex;
   justify-content: center;
 }
 
-.col1 form{
+.col1 form {
   display: flex;
   width: 100%;
   padding: 0px 30px;
   flex-direction: column;
 }
 
-
-.col1 form button{
+.col1 form button {
   width: 100%;
   background-color: red;
   color: white;
@@ -75,19 +62,20 @@
   cursor: pointer;
 }
 
-.col1 form button:hover{
+.col1 form button:hover {
   background: gray;
   transition: 1s;
 }
 
-.col1 form label{
+.col1 form label {
   font-size: 35px;
   letter-spacing: 2px;
   font-weight: 400;
   padding: 7px 0;
 }
 
-.col1 form input{
+.col1 form input,
+.col1 form textarea {
   background-color: transparent;
   border: none;
   font-size: 16px;
@@ -98,14 +86,57 @@
   width: 100%;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 1003px) {
+  .content {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center;
+    height: auto; /* Ajusta la altura para el contenido */
+    padding: 20px; /* Ajusta el padding */
+  }
 
-.col1 form textarea{
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  color: red;
-  padding-bottom: 10px;
-  border-bottom: 2px solid red;
-  border-radius: 3px;
-  width: 100%;
+  .cols {
+    width: 100%;
+    padding: 10px 0; /* Ajusta el padding */
+  }
+
+  .col0 {
+    padding: 20px 0; /* Ajusta el padding */
+  }
+
+  .col1 {
+    width: 100%;
+    padding: 20px 0; /* Ajusta el padding */
+  }
+
+  .col0 h2 {
+    font-size: 30px; /* Ajusta el tamaño de fuente */
+  }
+
+  .col0 p {
+    font-size: 20px; /* Ajusta el tamaño de fuente */
+  }
+
+  .col1 form {
+    padding: 0 10px; /* Ajusta el padding */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .col0 h2 {
+    font-size: 25px;
+  }
+
+  .col0 p {
+    font-size: 18px;
+  }
+
+  .col1 form {
+    padding: 0 10px;
+  }
 }

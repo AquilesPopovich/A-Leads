@@ -4,12 +4,19 @@
     justify-content: center;
     align-items: center;
     background-color: red;
-    height: 100%;
-    padding: 10px 30px;
+    height: 90%;
+    padding: 0 30px;
     color: #fff;
 }
 
+.linkC{
+    color: white;
+    text-decoration: none;
+}
 
+.linkC:hover{
+    color: red;
+}
 
 .col1{
     display: flex;
@@ -21,7 +28,7 @@
     flex-direction: column;
     width: 50%;
     align-items: center;    
-    padding: 10%;
+    padding-left: 10%;
 }
 
 .btn{

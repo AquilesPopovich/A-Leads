@@ -7,14 +7,21 @@
     height: 20vh;
     margin: 10px 20px;
     padding: 0px 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius: 20px;
+  }
+
+  .text{
+    font-size: 27px;
+    margin: 20px;
+    font-weight: 600;
   }
   
   .scrollContainer img {
     width: 120px;
-    padding: 10px 80px;
+    padding: 0 80px;
+    margin-bottom: 10px;
     height: 120px;
   }
   
