@@ -20,13 +20,22 @@
   color: red;
 }
 
+@media screen and (max-width: 1003px) {
+  .content{
+  flex-wrap: wrap;
+
+  }
+   
+ }
+
 .cols{
   width: 50%;
 }
 
 .col0 {
+ 
   text-align: start;
-  padding: 25px 60px;
+  padding: 5px 60px;
 }
 
 .col0 h2{
@@ -38,7 +47,7 @@
 
 .col0 p{
   font-size: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-weight: 400;
   
 }
@@ -86,4 +95,17 @@
   padding-bottom: 10px;
   border-bottom: 2px solid red;
   border-radius: 3px;
+  width: 100%;
+}
+
+
+.col1 form textarea{
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: red;
+  padding-bottom: 10px;
+  border-bottom: 2px solid red;
+  border-radius: 3px;
+  width: 100%;
 }

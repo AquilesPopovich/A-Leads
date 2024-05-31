@@ -9,6 +9,25 @@
 }
 
 
+@media screen and (max-width: 1000px) {
+ .container{
+flex-wrap: wrap;
+
+ }
+ .imgCardGran{
+  height: fit-content;
+}
+
+.col0{
+  width: 100%;
+  min-width: 400px;
+}
+.col1{
+  width: 100%;
+}
+  
+}
+
 
 .col0 {
   padding: 20px;

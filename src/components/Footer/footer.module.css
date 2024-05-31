@@ -16,20 +16,36 @@
     margin-right: 20px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
+  }
+
+  .aLi{
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .aLi:hover{
+    color: white;
+  }
+   
+  ul li{
+    margin: 10px 0;
   }
   
   .DivcontentIMG img {
-    padding: 0px 30px;
-    border-radius: 15px;
-    width: 60px;
+    padding: 0px 20px;
+    background-color: white;
+    margin-left: 60px;
+    width: 40px;
   }
 
   .DivcontentIMG {
    width: 100%;
    display: flex;
-   justify-content: space-around;
-   background-color: #aba1a1;
+   justify-content: start;
   }
 
   .contentLinks{

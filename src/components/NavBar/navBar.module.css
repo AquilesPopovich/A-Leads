@@ -45,7 +45,7 @@
 }
 
 /* Mostrar el botón de menú solo en dispositivos móviles */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1003px) {
   .mobileMenuButton {
     display: flex; /* Mostrar el botón de menú en dispositivos móviles */
     cursor: pointer;

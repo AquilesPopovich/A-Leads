@@ -11,11 +11,19 @@ import Inspired from './components/Inspired/Inspired';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Customers from './components/Customers/Customers';
+import { motion } from "framer-motion";
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
-  const [entrevistas, setEntrevistas] = useState(false);
   const [backgroundWhite, setBackgroundWhite] = useState(false); // Estado para controlar el cambio de fondo
+  const [language, setLanguage] = useState('es'); // Estado para controlar el idioma de la página
+  const [isOn, setIsOn] = useState(false);
+
+  const toggleSwitch = () => setIsOn(!isOn);
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'es' ? 'en' : 'es'); // Cambia el idioma entre español ('es') e inglés ('en')
+  };
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -34,10 +42,6 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const scrollToTop = () => {
-    document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   const scrollToSection = (direction) => {
     let currentSectionIndex = -1;
@@ -67,54 +71,69 @@ function App() {
     }
   };
 
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30
+  };
+
   return (
     <div className={`container ${backgroundWhite ? 'background-white' : ''}`}>
       <div id="Inicio">
-        <NavBar />
+        <NavBar language={language} />
+      </div>
+      <div className='divBtn'>
+        Español
+        <div className="switch" data-isOn={isOn} onClick={() => { toggleSwitch(); toggleLanguage(); }}>
+          <motion.div className="handle" layout transition={spring} />
+        </div>
+        English
       </div>
       <div data-aos="fade-right" className="scrollButtons">
         <button onClick={() => scrollToSection('up')}>↑</button>
         <button onClick={() => scrollToSection('down')}>↓</button>
       </div>
-      <div className="wrapper">
-        <div data-aos-duration="1500" data-aos="fade-right" className="cols col0">
-          <h1 className='h1Index'>
-            <span className='linkedin'>Linkedin</span> {' '} <br/><span className={`multiText`}>Nuestra </span> plataforma,
-            <br/>
-            <span className={`multiText`}>
-              Tus </span> clientes 
-          </h1>
-          
-          <div className="btns">
-            <button>Demo Call</button>
+      <div className={language === 'es' ? 'es-content' : 'en-content'}>
+        <div className="wrapper">
+          <div data-aos-duration="1500" data-aos="fade-right" className="cols col0">
+            <h1 className='h1Index'>
+              <span className='linkedin'>{language === 'es' ? 'Linkedin' : 'LinkedIn'}</span> {' '} <br />
+              <span className={`multiText`}>{language === 'es' ? 'Nuestra' : 'Our'} </span> plataforma,
+              <br />
+              <span className={`multiText`}>{language === 'es' ? 'Tus' : 'Your'} </span> clientes
+            </h1>
+
+            <div className="btns">
+              <button> <a href="https://calendly.com/armel9678/llamada-estrategica-aleads">{language === 'es' ? 'Demo Llamada' : 'Demo Call'}</a> </button>
+            </div>
           </div>
         </div>
         <div className="cols col1"></div>
       </div>
       
       <div data-aos-duration="2000" data-aos="fade-up" id="Servicios">
-        <Servicios />
+        <Servicios language={language}  />
       </div>
       <div data-aos-duration="2000" data-aos="fade-right" id="About">
-        <About />
+        <About language={language} />
       </div>
       <div data-aos-duration="1500"  data-aos="fade-up" id="Ofrecemos">
-        <Ofrecemos />
+        <Ofrecemos language={language} />
       </div>
       <div data-aos-duration="1500" data-aos="fade-up-right" id="Clientes">
-        <Clientes />
+        <Clientes language={language} />
       </div>
       <div data-aos-duration="2000" data-aos="fade-up" id="Inspired">
-        <Inspired />
+        <Inspired language={language} />
       </div>
       <div data-aos-duration="2000" data-aos="fade-left" id='Contacto'>
-        <Contacto />
+        <Contacto language={language} />
       </div>
-      <div data-aos-duration="2000"  data-aos="fade-up" id='Customers'>
+      <div data-aos-duration="2000"  data-aos="fade-down" id='Customers'>
         <Customers />
       </div>
       <div id="Footer">
-        <Footer />
+        <Footer language={language} />
       </div>
     </div>
   );

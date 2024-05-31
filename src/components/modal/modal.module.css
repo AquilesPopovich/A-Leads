@@ -1,52 +1,64 @@
 /* modal.module.css */
 .modalBackdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Asegura que esté por encima de todo */
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .contentBtn{
-    display: flex;
-    justify-content: end;
-    padding: 0px 5px 10px;
-  }
+.contentBtn {
+  display: flex;
+  justify-content: end;
+  padding: 0px 5px 10px;
+}
 
-  .closeButton{
-    background-color: red;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+.closeButton {
+  background-color: red;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.modalContent {
+  position: fixed;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 9999;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  animation: fadeInDown 0.5s ease; /* Aplicar la animación al modal */
+}
+
+.modalContent img {
+  width: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.modalContent h2 {
+  margin-bottom: 10px;
+}
+
+.modalContent p {
+  margin-bottom: 20px;
+}
+
+/* Definir la animación fadeInDown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
   }
-  
-  .modalContent {
-    background-color: white;
-    border-radius: 10px;
-    z-index: 9999;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .modalContent img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .modalContent h2 {
-    margin-bottom: 10px;
-  }
-  
-  .modalContent p {
-    margin-bottom: 20px;
-  }
-  
+}

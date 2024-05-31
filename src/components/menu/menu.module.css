@@ -23,7 +23,7 @@
             margin-top: 80px;
     color: #f3f5f8;
 
-
+            
             .header{
     color: #f3f5f8;
                 border-bottom: 1px solid rgb(153, 153, 153);
@@ -38,8 +38,8 @@
             a{
                 text-decoration: none;
     color: #f3f5f8;
-
-                font-size: 14px;
+                font-weight: 900;
+                font-size: 18px;
                 font-weight: 300;
             }
             
@@ -53,5 +53,9 @@
         gap: 40px;
     color: #f3f5f8;
 
+    }
+
+    .nav a:hover{
+        color: red;
     }
 }

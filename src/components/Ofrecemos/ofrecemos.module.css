@@ -4,8 +4,8 @@
   height: 100%;
 }
 
-.Soluciones{
-  font-size: 28px;
+.Soluciones {
+  font-size: 36px;
   font-weight: 800;
   padding-top: 10px;
   color: red;
@@ -14,31 +14,43 @@
 
 .cardContainers {
   display: flex;
-  flex-wrap: wrap;
-  align-items: start;
+  flex-direction: column;
+  align-items: center;
   margin: 10px 0;
   width: 100%;
   height: 100%;
   justify-content: center;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .card {
   position: relative;
-  margin: 10px 40px;
+  margin: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
   width: 450px;
   height: 300px;
   overflow: hidden;
   border-radius: 7px;
+  box-shadow: 13px 13px 20px -3px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 13px 13px 20px -3px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 13px 13px 20px -3px rgba(0, 0, 0, 0.51);
 }
 
-.card:hover{
-  border: 3px solid red;
+.card:first-child {
+  margin-bottom: 20px; /* Espacio entre la primera tarjeta y las siguientes */
 }
 
 .cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -48,12 +60,12 @@
 
 .card h3 {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: rgb(255, 0, 0);
+  font-size: 27px;
+  padding-bottom: 10px;
 }
 
 .btnDiv {
@@ -69,7 +81,7 @@
   transition: 2s;
 }
 
-.btn{
+.btn {
   cursor: pointer;
   background-color: transparent;
   border: none;

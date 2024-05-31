@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './modal.module.css';
 
-const Modal = ({ saberMas, setSaberMas, selectedInfo }) => {
+const Modal = ({ saberMas, setSaberMas, selectedInfo, language }) => {
   if (!saberMas) return null;
 
   return (
@@ -13,7 +13,7 @@ const Modal = ({ saberMas, setSaberMas, selectedInfo }) => {
         </div>
         <img src={selectedInfo.img} alt="" />
         <h2>{selectedInfo.name}</h2>
-        <p>{selectedInfo.detalle}</p>
+        <p>{ language === 'es' ? selectedInfo.detalle : selectedInfo.detalleI}</p>
       </div>
     </div>
   );

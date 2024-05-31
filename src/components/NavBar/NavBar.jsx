@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import Menu from '../menu/Menu';
 import imgLogo from '../../assets/logoPrueba.png'
 
-const NavBar = () => {
+const NavBar = ({language}) => {
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState(false);
 
@@ -39,15 +39,13 @@ const NavBar = () => {
       <nav className={`${style.nav} ${scrolled ? style.scrolled : ''}`}>
         <div className={style.logo}><img src={imgLogo} alt="" /></div>
 
-        
         <ul className={`${style.navItems} ${menu ? 'open' : ''}`}>
-        <li><a onClick={scrollToTop}> Inicio  </a></li>
-          <li><a href="#About">Conocenos</a></li>
-          <li><a href="#Ofrecemos">Servicios</a></li>
-          <li><a href="#Clientes">Casos de exitos</a></li>
-          <li><a href="#Inspired">Inspiraciones</a></li>
-          <li><a href="#Contacto">Contacto</a></li>
-
+          <li><a onClick={scrollToTop}>{language === 'es' ? 'Inicio' : 'Home'}</a></li>
+          <li><a href="#About">{language === 'es' ? 'Conócenos' : 'About Us'}</a></li>
+          <li><a href="#Ofrecemos">{language === 'es' ? 'Servicios' : 'Services'}</a></li>
+          <li><a href="#Clientes">{language === 'es' ? 'Casos de éxito' : 'Success Stories'}</a></li>
+          <li><a href="#Inspired">{language === 'es' ? 'Inspiraciones' : 'Inspirations'}</a></li>
+          <li><a href="#Contacto">{language === 'es' ? 'Contacto' : 'Contact'}</a></li>
         </ul>
        
         <div className={style.mobileMenuButton} onClick={toggleMenu}>
