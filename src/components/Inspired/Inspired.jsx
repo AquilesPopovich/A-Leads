@@ -10,7 +10,7 @@ const Inspired = ({language}) => {
 }, {
   name: "Videos",
   img: "https://fiter.io/wp-content/uploads/Why-Fiter-02-We-re-Everywhere-Literally.png",
-  link: "https://www.youtube.com/watch?si=0cgZlBvmw5cs8CHn&v=AlTYKmhGaik&feature=youtu.be "
+  link: "https://youtube.com/@armel9678.?si=1q5GjjjxOY_gYe7- "
 }, {
   name: "Community",
   img: "https://fiter.io/wp-content/uploads/Why-Fiter-03-The-Power-of-Community-.png",
@@ -34,7 +34,7 @@ return (
             <h3>{inspiracion.name}</h3>
             <div className={style.contButton}>
               <button>
-                <a href={inspiracion.link}>
+                <a className={style.link} target="_blank" href={inspiracion.link}>
 
                 {language === 'es' ? 'Saber más' : 'Learn More'}
                 </a>

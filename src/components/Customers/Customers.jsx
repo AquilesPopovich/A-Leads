@@ -16,15 +16,15 @@ const Customers = () => {
        
     },{
         name: "e-Propel",
-        imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTvZv5N2EbEyhHcNDX5nCqveiPYk18TiCGDBBcRwaBjA&s",
+        imgEmpresa: "https://media.licdn.com/dms/image/C4D0BAQEaLfZwL524sA/company-logo_200_200/0/1631310319626?e=2147483647&v=beta&t=ldHGMaMIKTFdM15mqlvsZi9Sgtsqao7HEWQtdy4XVLc",
         
     },{
         name: "Bluehackers",
         imgEmpresa: "https://media.licdn.com/dms/image/C4E0BAQFb3SapvH43zA/company-logo_200_200/0/1630643218740/bluehackers_logo?e=2147483647&v=beta&t=1kup6VHIBu_1Wz-HsB90njTVpUtLVEWGvig4xXFEDeI",
         
     },{
-        name: " BrainyTrade",
-        imgEmpresa: "https://i.ebayimg.com/images/g/4dUAAOSwtOBgrMjO/s-l300.jpg",
+        name: "BrainyTrade",
+        imgEmpresa: "https://yt3.googleusercontent.com/NijtJQcZ6RPhnE6XQdnouwMkJNFi43zzB4gPHW3_DeXdjYIJkco8ZNPLe57XbdadDLojjWLm=s176-c-k-c0x00ffffff-no-rj",
     },{
         name: "MaxScholar",
         imgEmpresa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pfsuBVnoEpk75tolzqKa6jEjQvyvhOf7Ct7EMzJ2ig&s",

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './footer.module.css';
 import logo from '../../assets/logoPrueba.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 
 const Footer = ({language}) => {
@@ -50,9 +50,9 @@ const Footer = ({language}) => {
                   <p><a className={styles.aLi} href="mailto:armelamorrortu9678@gmail.com">armelamorrortu9678@gmail.com</a></p>
                   <div className={styles.contentLinks}>
                     <ul>
-                      <li><a className={styles.link} href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                      <li><a className={styles.link} href="https://www.instagram.com/armeldeamorrortu/"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                      <li><a className={styles.link} href=""><FontAwesomeIcon icon={faWhatsapp} /></a></li>
+                      <li><a className={styles.link} target="_blank" href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                      <li><a className={styles.link} target="_blank" href="https://www.instagram.com/arme.leads?igsh=OGZoYTliNjI0eGRj"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                      <li><a className={styles.link} target="_blank" href="https://youtube.com/@armel9678.?si=1q5GjjjxOY_gYe7-"><FontAwesomeIcon icon={faYoutube} /></a></li>
                     </ul>
                   </div>
                 </div>
