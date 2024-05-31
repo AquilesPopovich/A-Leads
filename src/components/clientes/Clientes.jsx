@@ -84,7 +84,7 @@ const Clientes = ({ language }) => {
           })}
         </div>
         <div className={style.test}>
-        <button className={style.btnTestimonio}> <a className={style.allTest} href='https://youtube.com/playlist?list=PLHmHWTcNj6DhkM6sqEuwzasl0xMz1th0L&si=tQ9N7LMMO67NhdHK'  target="_blank">
+        <button className={style.btnTestimonio}> <a className={style.allTest} href='https://youtube.com/playlist?list=PLHmHWTcNj6DhkM6sqEuwzasl0xMz1th0L&si=tQ9N7LMMO67NhdHK' rel="noreferrer" target="_blank">
 
 {language === 'es' ? 'Mira todos nuestros testimonios' : 'Watch all testimonial'}
 </a>

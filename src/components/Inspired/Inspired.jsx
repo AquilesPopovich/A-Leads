@@ -34,7 +34,7 @@ return (
             <h3>{inspiracion.name}</h3>
             <div className={style.contButton}>
               <button>
-                <a className={style.link} target="_blank" href={inspiracion.link}>
+                <a className={style.link} rel="noreferrer" target="_blank" href={inspiracion.link}>
 
                 {language === 'es' ? 'Saber más' : 'Learn More'}
                 </a>

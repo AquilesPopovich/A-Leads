@@ -50,9 +50,9 @@ const Footer = ({language}) => {
                   <p><a className={styles.aLi} href="mailto:armelamorrortu9678@gmail.com">armelamorrortu9678@gmail.com</a></p>
                   <div className={styles.contentLinks}>
                     <ul>
-                      <li><a className={styles.link} target="_blank" href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                      <li><a className={styles.link} target="_blank" href="https://www.instagram.com/arme.leads?igsh=OGZoYTliNjI0eGRj"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                      <li><a className={styles.link} target="_blank" href="https://youtube.com/@armel9678.?si=1q5GjjjxOY_gYe7-"><FontAwesomeIcon icon={faYoutube} /></a></li>
+                      <li><a className={styles.link} rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/armeldeamorrortu/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                      <li><a className={styles.link} rel="noreferrer" target="_blank" href="https://www.instagram.com/arme.leads?igsh=OGZoYTliNjI0eGRj"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                      <li><a className={styles.link} rel="noreferrer" target="_blank" href="https://youtube.com/@armel9678.?si=1q5GjjjxOY_gYe7-"><FontAwesomeIcon icon={faYoutube} /></a></li>
                     </ul>
                   </div>
                 </div>
