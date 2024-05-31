@@ -68,8 +68,9 @@ const Customers = () => {
             <h3 className={style.text}>Other customers</h3>
             <div className={style.scrollContainer}>
                 {clientesInfo.map((cliente, index) => (
-                    <a target="_blank" href={cliente.link}>
+                    <a target="_blank" rel="noreferrer" href={cliente.link}>
                         <img
+                        
                         key={index}
                         src={cliente.imgEmpresa}
                         alt={cliente.name}

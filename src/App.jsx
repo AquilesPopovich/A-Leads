@@ -14,7 +14,9 @@ import Customers from './components/Customers/Customers';
 import { motion } from "framer-motion";
 
 function App() {
-  const [scrollY, setScrollY] = useState(0);
+   /* eslint-disable no-unused-vars */
+   const [scrollY, setScrollY] = useState(0);
+   /* eslint-enable no-unused-vars */
   const [backgroundWhite, setBackgroundWhite] = useState(false); // Estado para controlar el cambio de fondo
   const [language, setLanguage] = useState('es'); // Estado para controlar el idioma de la página
   const [isOn, setIsOn] = useState(false);
