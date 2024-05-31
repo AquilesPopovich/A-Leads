@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import style from './servicios.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
