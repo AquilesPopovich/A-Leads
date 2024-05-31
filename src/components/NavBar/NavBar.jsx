@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import style from './navBar.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { AnimatePresence } from 'framer-motion';
 import Menu from '../menu/Menu';
 import imgLogo from '../../assets/logoPrueba.png'

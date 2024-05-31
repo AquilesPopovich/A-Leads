@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import style from './servicios.module.css';
-import armelSeriviocs from '../../assets/armelServicios.jpeg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

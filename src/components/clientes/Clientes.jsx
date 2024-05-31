@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { TiChartLineOutline } from 'react-icons/ti';
 import style from './clientes.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

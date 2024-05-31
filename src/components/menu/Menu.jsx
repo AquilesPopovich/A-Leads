@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './menu.module.css';
-import { faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { menuSlide } from '../NavBar/Anim.ts';
 
